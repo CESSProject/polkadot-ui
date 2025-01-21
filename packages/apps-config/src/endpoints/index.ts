@@ -1,4 +1,4 @@
-// Copyright 2017-2024 @polkadot/apps-config authors & contributors
+// Copyright 2017-2025 @polkadot/apps-config authors & contributors
 // SPDX-License-Identifier: Apache-2.0
 
 import type { TFunction, TOptions } from '../types.js';
@@ -6,7 +6,7 @@ import type { LinkOption } from './types.js';
 
 import { createCustom, createDev, createOwn } from './development.js';
 import { prodChains, prodRelayKusama, prodRelayPolkadot } from './production.js';
-import { testChains, testRelayRococo, testRelayWestend } from './testing.js';
+import { testChains, testRelayWestend } from './testing.js';
 import { testRelayPaseo } from './testingRelayPaseo.js';
 import { expandEndpoints } from './util.js';
 
@@ -54,15 +54,6 @@ export function createWsEndpoints (t: TFunction = defaultT, firstOnly = false, w
       value: ''
     },
     ...expandEndpoints(t, [testRelayWestend], firstOnly, withSort),
-    {
-      isDisabled: false,
-      isHeader: true,
-      text: t('rpc.header.rococo.relay', 'Test Rococo & parachains', { ns: 'apps-config' }),
-      textBy: '',
-      ui: {},
-      value: ''
-    },
-    ...expandEndpoints(t, [testRelayRococo], firstOnly, withSort),
     {
       isDisabled: false,
       isHeader: true,

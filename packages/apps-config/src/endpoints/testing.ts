@@ -1,12 +1,12 @@
-// Copyright 2017-2024 @polkadot/apps-config authors & contributors
+// Copyright 2017-2025 @polkadot/apps-config authors & contributors
 // SPDX-License-Identifier: Apache-2.0
 
 import type { EndpointOption } from './types.js';
 
 import { chains3dpassSVG, chainsAcalaSVG, chainsAlephSVG, chainsAllfeatSVG, chainsAnalogSVG, chainsArgonSVG, chainsBrainstormPNG, chainsChainflipPNG, chainsCreditcoinTestPNG, chainsDebioSVG, chainsEquilibriumSVG, chainsFerrumPNG, chainsFragnovaPNG, chainsJurPNG, chainsKintsugiPNG, chainsLiberlandPNG, chainsLogionPNG, chainsMyriadPNG, chainsShidenPNG, chainsSkyekiwiPNG, chainsTanglePNG, chainsVaraTestnetPNG } from '../ui/logos/chains/index.js';
-import { nodesArcticPNG, nodesAresGladiosSVG, nodesBifrostSVG, nodesBitcountryPNG, nodesCereSVG, nodesCessPNG, nodesCloverSVG, nodesCrustMaxwellSVG, nodesCurioSVG, nodesDanceboxSVG, nodesDatahighwayPNG, nodesDockPNG, nodesDolphinSVG, nodesDotmogSVG, nodesEdgewareWhitePNG, nodesEncointerBlueSVG, nodesFantourPNG, nodesGalitalLogoPNG, nodesGamepowerSVG, nodesGeekSVG, nodesInterlaySVG, nodesIpsePNG, nodesJazPNG, nodesJupiterSVG, nodesKarmachainSVG, nodesKhalaSVG, nodesKlugPNG, nodesKylinPNG, nodesLaminarCircleSVG, nodesLitentryPNG, nodesMantaPNG, nodesMathSVG, nodesMinixPNG, nodesMoonbaseAlphaSVG, nodesMybankPNG, nodesNftmartPNG, nodesNodleSVG, nodesOpalLogoPNG, nodesOpportunityPNG, nodesPhalaSVG, nodesPhoenixPNG, nodesPhykenNetworkPNG, nodesPichiuPNG, nodesPolkadexSVG, nodesPolkafoundrySVG, nodesPolymeshSVG, nodesPontemSVG, nodesPrismPNG, nodesRealisPNG, nodesRiochainSVG, nodesSherpaxPNG, nodesSoonsocialPNG, nodesSoraSubstrateSVG, nodesSubdaoPNG, nodesSubgameSVG, nodesSubspacePNG, nodesSubstrateHexagonSVG, nodesTernoaSVG, nodesThebifrostPNG, nodesUniartsPNG, nodesUniqueSVG, nodesUnitnetworkPNG, nodesWeb3gamesSVG, nodesZCloakSVG, nodesZeroSVG } from '../ui/logos/nodes/index.js';
+import { nodesArcticPNG, nodesAresGladiosSVG, nodesAutonomysPNG, nodesBifrostSVG, nodesBitcountryPNG, nodesCereSVG, nodesCessPNG, nodesCloverSVG, nodesCrustMaxwellSVG, nodesCurioSVG, nodesDanceboxSVG, nodesDatahighwayPNG, nodesDockPNG, nodesDolphinSVG, nodesDotmogSVG, nodesEdgewareWhitePNG, nodesEncointerBlueSVG, nodesFantourPNG, nodesGalitalLogoPNG, nodesGamepowerSVG, nodesGeekSVG, nodesInterlaySVG, nodesIpsePNG, nodesJazPNG, nodesJupiterSVG, nodesKarmachainSVG, nodesKhalaSVG, nodesKlugPNG, nodesKylinPNG, nodesLaminarCircleSVG, nodesLitentryPNG, nodesMantaPNG, nodesMathSVG, nodesMinixPNG, nodesMoonbaseAlphaSVG, nodesMybankPNG, nodesNftmartPNG, nodesNodleSVG, nodesOpalLogoPNG, nodesOpportunityPNG, nodesPhalaSVG, nodesPhoenixPNG, nodesPhykenNetworkPNG, nodesPichiuPNG, nodesPolkadexSVG, nodesPolkafoundrySVG, nodesPolymeshSVG, nodesPontemSVG, nodesPrismPNG, nodesRealisPNG, nodesRiochainSVG, nodesSherpaxPNG, nodesSoonsocialPNG, nodesSoraSubstrateSVG, nodesSubdaoPNG, nodesSubgameSVG, nodesSubspacePNG, nodesSubstrateHexagonSVG, nodesTernoaSVG, nodesThebifrostPNG, nodesUniartsPNG, nodesUniqueSVG, nodesUnitnetworkPNG, nodesWeb3gamesSVG, nodesZCloakSVG, nodesZeroSVG } from '../ui/logos/nodes/index.js';
 
-export * from './testingRelayRococo.js';
+export * from './testingRelayPaseo.js';
 export * from './testingRelayWestend.js';
 
 // The available endpoints that will show in the dropdown. For the most part (with the exception of
@@ -106,6 +106,29 @@ export const testChains: Omit<EndpointOption, 'teleport'>[] = [
     ui: {
       color: '#121212',
       logo: nodesJazPNG
+    }
+  },
+  {
+    info: 'autonomys-taurus-evm',
+    providers: {
+      Labs: 'wss://auto-evm.taurus.autonomys.xyz/ws'
+    },
+    text: 'Autonomys Taurus EVM',
+    ui: {
+      color: '#5870B3',
+      logo: nodesAutonomysPNG
+    }
+  },
+  {
+    info: 'autonomys-taurus-testnet',
+    providers: {
+      'Labs 1': 'wss://rpc-0.taurus.subspace.network/ws',
+      'Labs 2': 'wss://rpc-1.taurus.subspace.network/ws'
+    },
+    text: 'Autonomys Taurus Testnet',
+    ui: {
+      color: '#5870B3',
+      logo: nodesAutonomysPNG
     }
   },
   {
@@ -298,7 +321,7 @@ export const testChains: Omit<EndpointOption, 'teleport'>[] = [
   {
     info: 'encointer',
     providers: {
-      'Encointer Association': 'wss://gesell.encointer.org'
+      // 'Encointer Association': 'wss://gesell.encointer.org' // https://github.com/polkadot-js/apps/issues/11186
     },
     text: 'Encointer Gesell',
     ui: {
@@ -430,7 +453,7 @@ export const testChains: Omit<EndpointOption, 'teleport'>[] = [
   {
     info: 'interlay-testnet',
     providers: {
-      Interlay: 'wss://api-testnet.interlay.io/parachain/'
+      // Interlay: 'wss://api-testnet.interlay.io/parachain/' https://github.com/polkadot-js/apps/issues/11157
     },
     text: 'Interlay Testnet',
     ui: {
@@ -476,7 +499,7 @@ export const testChains: Omit<EndpointOption, 'teleport'>[] = [
   {
     info: 'jur',
     providers: {
-      Jur: 'wss://testnet.jur.io'
+      // Jur: 'wss://testnet.jur.io' // https://github.com/polkadot-js/apps/issues/11186
     },
     text: 'Jur Testnet',
     ui: {
@@ -610,7 +633,8 @@ export const testChains: Omit<EndpointOption, 'teleport'>[] = [
       Blast: 'wss://moonbase-alpha.public.blastapi.io',
       Dwellir: 'wss://moonbase-rpc.dwellir.com',
       'Moonbeam Foundation': 'wss://wss.api.moonbase.moonbeam.network',
-      OnFinality: 'wss://moonbeam-alpha.api.onfinality.io/public-ws',
+      // OnFinality: 'wss://moonbeam-alpha.api.onfinality.io/public-ws', https://github.com/polkadot-js/apps/issues/11026
+      RadiumBlock: 'wss://moonbase.public.curie.radiumblock.co/ws',
       UnitedBloc: 'wss://moonbase.unitedbloc.com'
     },
     text: 'Moonbase Alpha',
@@ -800,6 +824,7 @@ export const testChains: Omit<EndpointOption, 'teleport'>[] = [
   },
   {
     info: 'shibuya',
+    isPeople: true,
     providers: {
       Astar: 'wss://rpc.shibuya.astar.network',
       Dwellir: 'wss://shibuya-rpc.dwellir.com'
@@ -824,10 +849,8 @@ export const testChains: Omit<EndpointOption, 'teleport'>[] = [
   {
     info: 'sora-substrate',
     providers: {
-      'Soramitsu #1': 'wss://ws.framenode-1.s1.stg1.sora2.soramitsu.co.jp',
-      'Soramitsu #2': 'wss://ws.framenode-2.s1.stg1.sora2.soramitsu.co.jp',
-      'Soramitsu #3': 'wss://ws.framenode-3.s2.stg1.sora2.soramitsu.co.jp',
-      'Soramitsu #4': 'wss://ws.framenode-4.s2.stg1.sora2.soramitsu.co.jp'
+      'Soramitsu #1': 'wss://ws.framenode-7.s4.stg1.sora2.soramitsu.co.jp',
+      'Soramitsu #2': 'wss://ws.framenode-8.s5.stg1.sora2.soramitsu.co.jp'
     },
     text: 'SORA-staging',
     ui: {
@@ -905,7 +928,7 @@ export const testChains: Omit<EndpointOption, 'teleport'>[] = [
   {
     info: 'subspace-gemini-3g',
     providers: {
-      Europe: 'wss://rpc-1.gemini-3g.subspace.network/ws',
+      // Europe: 'wss://rpc-1.gemini-3g.subspace.network/ws', // https://github.com/polkadot-js/apps/issues/10912
       US: 'wss://rpc-0.gemini-3g.subspace.network/ws'
     },
     text: 'Subspace Gemini 3g',
@@ -917,7 +940,7 @@ export const testChains: Omit<EndpointOption, 'teleport'>[] = [
   {
     info: 'subspace-gemini-3g-nova',
     providers: {
-      Subspace: 'wss://nova.gemini-3g.subspace.network/ws'
+      // Subspace: 'wss://nova.gemini-3g.subspace.network/ws' https://github.com/polkadot-js/apps/issues/10957
     },
     text: 'Subspace Gemini 3g Nova',
     ui: {
@@ -928,8 +951,8 @@ export const testChains: Omit<EndpointOption, 'teleport'>[] = [
   {
     info: 'subspace-gemini-3h',
     providers: {
-      US: 'wss://rpc-0.gemini-3h.subspace.network/ws',
-      US2: 'wss://rpc-1.gemini-3h.subspace.network/ws'
+      US: 'wss://rpc-0.gemini-3h.subspace.network/ws'
+      // US2: 'wss://rpc-1.gemini-3h.subspace.network/ws' // https://github.com/polkadot-js/apps/issues/11098
     },
     text: 'Subspace Gemini 3h',
     ui: {
@@ -940,8 +963,8 @@ export const testChains: Omit<EndpointOption, 'teleport'>[] = [
   {
     info: 'subspace-gemini-3h-nova',
     providers: {
-      EU1: 'wss://nova-0.gemini-3h.subspace.network/ws',
-      EU2: 'wss://nova-1.gemini-3h.subspace.network/ws'
+      // EU1: 'wss://nova-0.gemini-3h.subspace.network/ws', // https://github.com/polkadot-js/apps/issues/11098
+      // EU2: 'wss://nova-1.gemini-3h.subspace.network/ws' // https://github.com/polkadot-js/apps/issues/11098
     },
     text: 'Subspace Gemini 3h Nova',
     ui: {
@@ -1100,7 +1123,7 @@ export const testChains: Omit<EndpointOption, 'teleport'>[] = [
     homepage: 'https://zero.io',
     info: 'ZERO Alphaville',
     providers: {
-      GameDAO: 'wss://rpc.dev.gamedao.net'
+      // GameDAO: 'wss://rpc.dev.gamedao.net' https://github.com/polkadot-js/apps/issues/11026
     },
     text: 'ZERO Alphaville',
     ui: {

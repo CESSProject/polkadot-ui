@@ -1,4 +1,4 @@
-// Copyright 2017-2024 @polkadot/react-hooks authors & contributors
+// Copyright 2017-2025 @polkadot/react-hooks authors & contributors
 // SPDX-License-Identifier: Apache-2.0
 
 import type { Blockchain } from '@acala-network/chopsticks-core';
@@ -31,6 +31,7 @@ export interface ApiProps extends ApiState {
   apiEndpoint: LinkOption | null;
   apiError: string | null;
   apiIdentity: ApiPromise;
+  apiCoretime: ApiPromise;
   enableIdentity: boolean;
   apiRelay: ApiPromise | null;
   apiSystemPeople: ApiPromise | null;

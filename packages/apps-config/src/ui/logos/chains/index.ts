@@ -1,4 +1,4 @@
-// Copyright 2017-2024 @polkadot/apps authors & contributors
+// Copyright 2017-2025 @polkadot/apps authors & contributors
 // SPDX-License-Identifier: Apache-2.0
 
 // Do not edit. Auto-generated via node scripts/imgConvert.mjs
@@ -34,7 +34,8 @@ export { chainsFrequencySVG } from './generated/frequencySVG.js';
 export { chainsGeminisPNG } from './generated/geminisPNG.js';
 export { chainsGenshiroSVG } from './generated/genshiroSVG.js';
 export { chainsGmJPEG } from './generated/gmJPEG.js';
-export { chainsHydratePNG } from './generated/hydratePNG.js';
+export { chainsHydrationPaseoSVG } from './generated/hydration-paseoSVG.js';
+export { chainsHydrationSVG } from './generated/hydrationSVG.js';
 export { chainsIdiyanaleLogoWhiteSVG } from './generated/idiyanale_logo_whiteSVG.js';
 export { chainsInvarchJPEG } from './generated/invarchJPEG.js';
 export { chainsJurPNG } from './generated/jurPNG.js';
@@ -52,6 +53,7 @@ export { chainsMangataPNG } from './generated/mangataPNG.js';
 export { chainsMangataxPNG } from './generated/mangataxPNG.js';
 export { chainsMoonsamaPNG } from './generated/moonsamaPNG.js';
 export { chainsMyriadPNG } from './generated/myriadPNG.js';
+export { chainsMyxcavPNG } from './generated/myxcavPNG.js';
 export { chainsNeurowebTestnetPNG } from './generated/neuroweb-testnetPNG.js';
 export { chainsNeurowebPNG } from './generated/neurowebPNG.js';
 export { chainsOakPNG } from './generated/oakPNG.js';
@@ -68,13 +70,13 @@ export { chainsRiodefiPNG } from './generated/riodefiPNG.js';
 export { chainsRococoSVG } from './generated/rococoSVG.js';
 export { chainsShidenPNG } from './generated/shidenPNG.js';
 export { chainsSkyekiwiPNG } from './generated/skyekiwiPNG.js';
-export { chainsSnakenetSVG } from './generated/snakenetSVG.js';
 export { chainsSnowbridgePNG } from './generated/snowbridgePNG.js';
 export { chainsSpannerPNG } from './generated/spannerPNG.js';
 export { chainsStandardPNG } from './generated/standardPNG.js';
 export { chainsT0rnPNG } from './generated/t0rnPNG.js';
 export { chainsTanglePNG } from './generated/tanglePNG.js';
 export { chainsTinkerPNG } from './generated/tinkerPNG.js';
+export { chainsTorusPNG } from './generated/torusPNG.js';
 export { chainsTotemSVG } from './generated/totemSVG.js';
 export { chainsTuringPNG } from './generated/turingPNG.js';
 export { chainsUnorthodoxPNG } from './generated/unorthodoxPNG.js';

@@ -1,4 +1,4 @@
-// Copyright 2017-2024 @polkadot/apps authors & contributors
+// Copyright 2017-2025 @polkadot/apps authors & contributors
 // SPDX-License-Identifier: Apache-2.0
 
 // Do not edit. Auto-generated via node scripts/imgConvert.mjs
@@ -12,6 +12,7 @@ export { nodesAresOdysseySVG } from './generated/ares-odysseySVG.js';
 export { nodesAresPNG } from './generated/aresPNG.js';
 export { nodesAssetHubSVG } from './generated/assetHubSVG.js';
 export { nodesAstarPNG } from './generated/astarPNG.js';
+export { nodesAutonomysPNG } from './generated/autonomysPNG.js';
 export { nodesAventusSVG } from './generated/aventusSVG.js';
 export { nodesBajunPNG } from './generated/bajunPNG.js';
 export { nodesBasiliskRococoBgPNG } from './generated/basilisk-rococo-bgPNG.js';
@@ -62,6 +63,7 @@ export { nodesHelixstreetPNG } from './generated/helixstreetPNG.js';
 export { nodesHumanodePNG } from './generated/humanodePNG.js';
 export { nodesHyperbridgePNG } from './generated/hyperbridgePNG.js';
 export { nodesIdavollPNG } from './generated/idavollPNG.js';
+export { nodesIdealNetworkSVG } from './generated/ideal-networkSVG.js';
 export { nodesImbuePNG } from './generated/imbuePNG.js';
 export { nodesInnovatorPNG } from './generated/innovatorPNG.js';
 export { nodesIntegriteeSVG } from './generated/integriteeSVG.js';
@@ -70,6 +72,7 @@ export { nodesInvoPNG } from './generated/invoPNG.js';
 export { nodesIpciSVG } from './generated/ipciSVG.js';
 export { nodesIpsePNG } from './generated/ipsePNG.js';
 export { nodesIpseSVG } from './generated/ipseSVG.js';
+export { nodesJamtonSVG } from './generated/jamtonSVG.js';
 export { nodesJazPNG } from './generated/jazPNG.js';
 export { nodesJoystreamSVG } from './generated/joystreamSVG.js';
 export { nodesJupiterSVG } from './generated/jupiterSVG.js';
@@ -85,6 +88,7 @@ export { nodesKulupuSVG } from './generated/kulupuSVG.js';
 export { nodesKusariSVG } from './generated/kusariSVG.js';
 export { nodesKylinPNG } from './generated/kylinPNG.js';
 export { nodesLaminarCircleSVG } from './generated/laminar-circleSVG.js';
+export { nodesLitentryPaseoSVG } from './generated/litentry-paseoSVG.js';
 export { nodesLitentryRococoPNG } from './generated/litentry-rococoPNG.js';
 export { nodesLitentryPNG } from './generated/litentryPNG.js';
 export { nodesLitmusPNG } from './generated/litmusPNG.js';
@@ -103,6 +107,7 @@ export { nodesMoonsamaSVG } from './generated/moonsamaSVG.js';
 export { nodesMoonshadowPNG } from './generated/moonshadowPNG.js';
 export { nodesMusePNG } from './generated/musePNG.js';
 export { nodesMybankPNG } from './generated/mybankPNG.js';
+export { nodesMyriadPaseoSVG } from './generated/myriadPaseoSVG.js';
 export { nodesMythosPNG } from './generated/mythosPNG.js';
 export { nodesNftmartPNG } from './generated/nftmartPNG.js';
 export { nodesNodleSVG } from './generated/nodleSVG.js';
@@ -131,6 +136,7 @@ export { nodesPrismPNG } from './generated/prismPNG.js';
 export { nodesQuartzPNG } from './generated/quartzPNG.js';
 export { nodesRealisPNG } from './generated/realisPNG.js';
 export { nodesRegionxCocosPNG } from './generated/regionxCocosPNG.js';
+export { nodesRegionxPNG } from './generated/regionxPNG.js';
 export { nodesRexSVG } from './generated/rexSVG.js';
 export { nodesRiochainSVG } from './generated/riochainSVG.js';
 export { nodesRobonomicsSVG } from './generated/robonomicsSVG.js';
