@@ -1,6 +1,7 @@
 // Copyright 2017-2025 @polkadot/app-coretime authors & contributors
 // SPDX-License-Identifier: Apache-2.0
 
+import type { ChainInformation } from '@polkadot/react-hooks/types';
 import type { PhaseName } from './constants.js';
 
 export interface PhaseInfo {
@@ -82,7 +83,7 @@ export interface RegionInfo {
   regionEnd: number;
 }
 
-export type ChainName = 'kusama' | 'polkadot' | 'paseo testnet' | 'westend'
+export type RelayName = 'kusama' | 'polkadot' | 'paseo testnet' | 'westend'
 
 export interface GetResponse {
   blocks: {
@@ -93,4 +94,26 @@ export interface GetResponse {
     coretime: (blocks: number) => number;
     relay: (blocks: number) => number;
   };
+}
+
+export interface BaseFilterProps {
+  data: number[];
+  onFilter: (data: number[]) => void;
+}
+
+export interface ChainInfoFilterProps extends BaseFilterProps {
+  chainInfo: Record<number, ChainInformation>;
+}
+
+export type SortDirection = 'DESC' | 'ASC' | '';
+
+export enum FilterType {
+  BLOCKS = 'blocks',
+  SEARCH = 'search',
+  TYPE = 'type'
+}
+
+export interface ActiveFilters {
+  search: number[];
+  type: number[];
 }

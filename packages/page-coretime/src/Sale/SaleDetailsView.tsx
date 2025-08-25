@@ -1,16 +1,16 @@
 // Copyright 2017-2025 @polkadot/app-coretime authors & contributors
 // SPDX-License-Identifier: Apache-2.0
 
-import type { ChainName, SaleParameters } from '../types.js';
+import type { RelayName, SaleParameters } from '../types.js';
 
-import React, { useCallback } from 'react';
+import React, { useMemo } from 'react';
 
-import { Button, styled } from '@polkadot/react-components';
+import { styled } from '@polkadot/react-components';
 
 import { PhaseName } from '../constants.js';
 import { useTranslation } from '../translate.js';
 import PhaseTable from './PhaseTable.js';
-import { SubScanButton } from './SubScanButton.js';
+import { SubscanModuleCallUrl } from './SubscanModuleCallUrl.js';
 
 const ResponsiveContainer = styled.div`
   display: flex;
@@ -78,16 +78,14 @@ const phases = {
   }
 };
 
-const SaleDetailsView = ({ chainName, chosenSaleNumber, saleParams }: { saleParams: SaleParameters, chosenSaleNumber: number, chainName: ChainName }) => {
+const dotLakeUrl = 'https://data.parity.io/coretime';
+
+const SaleDetailsView = ({ chosenSaleNumber, relayName, saleParams }: { saleParams: SaleParameters, chosenSaleNumber: number, relayName: RelayName }) => {
   const { t } = useTranslation();
 
-  const openCoretimeDashboard = useCallback(() => {
-    window.open('https://data.parity.io/coretime');
-  }, []);
-
-  const openSubscanSalePriceGraph = useCallback(() => {
-    window.open(`https://coretime-${chainName}.subscan.io/coretime_dashboard`);
-  }, [chainName]);
+  const subscanPriceGraphUrl = useMemo(() =>
+    `https://coretime-${relayName}.subscan.io/coretime_dashboard`
+  , [relayName]);
 
   if (chosenSaleNumber === -1 || !saleParams) {
     return null;
@@ -100,7 +98,7 @@ const SaleDetailsView = ({ chainName, chosenSaleNumber, saleParams }: { salePara
         <div style={{ display: 'grid', gap: '1rem', gridTemplateRows: '1fr 1fr 1fr', minWidth: '200px' }}>
           {!saleParams?.phaseConfig &&
             <div>
-              <p>{t(`This sale is of unsual length of ${saleParams.currentRegion.end.ts - saleParams.currentRegion.start.ts} timeslices, hence the regular phases are not applicable.`)}</p>
+              <p>{t(`This sale is of unusual length of ${saleParams.currentRegion.end.ts - saleParams.currentRegion.start.ts} timeslices, hence the regular phases are not applicable.`)}</p>
               <p>{t(`Sale start timeslice: ${saleParams.currentRegion.start.ts}`)}</p>
               <p>{t(`Sale end timeslice: ${saleParams.currentRegion.end.ts}`)}</p>
             </div>
@@ -121,30 +119,39 @@ const SaleDetailsView = ({ chainName, chosenSaleNumber, saleParams }: { salePara
         <Title>{t('Region for sale ')}</Title>
         <p style={{ maxWidth: '600px', opacity: '0.8' }}>{t('Region is an asset of Coretime. It signifies the upcoming sales period within which a core can be secured by purchasing coretime. Acquiring coretime grants access to a core for the duration of that specific region.')}</p>
         {saleParams?.regionForSale && <PhaseTable phaseInfo={saleParams?.regionForSale} />}
-        <Title>Price graph</Title>
-        <Button
-          isBasic
-          label={t('Open Subscan Sale Price graph')}
-          onClick={openSubscanSalePriceGraph}
-        />
-        <Title>{t('Core Purchase Transactions')}</Title>
-        <SubScanButton
-          chainName={chainName}
-          chosenSaleNumber={chosenSaleNumber}
-          currentRegion={saleParams.currentRegion}
-        />
+        <Title>{t('Subscan Links')}</Title>
+        <div style={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}>
+          <a
+            href={subscanPriceGraphUrl}
+            rel='noopener noreferrer'
+            target='_blank'
+          >Sale Purchase Graph</a>
+          <SubscanModuleCallUrl
+            chainName={relayName}
+            chosenSaleNumber={chosenSaleNumber}
+            currentRegion={saleParams.currentRegion}
+            urlTitle='Sale Purchase Transactions'
+          />
+          <SubscanModuleCallUrl
+            call={'renew'}
+            chainName={relayName}
+            chosenSaleNumber={chosenSaleNumber}
+            currentRegion={saleParams.currentRegion}
+            urlTitle='Sale Renewal Transactions'
+          />
+        </div>
         <Title>{t('DotLake Coretime Dashboard')}</Title>
-        <Button
-          isBasic
-          label={t('DotLake Coretime Dashboard')}
-          onClick={openCoretimeDashboard}
-        />
+        <a
+          href={dotLakeUrl}
+          rel='noopener noreferrer'
+          target='_blank'
+        >Dot Lake</a>
         <Title>{t('Coretime providers')}</Title>
         <div style={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}>
           {Object.entries(providers).map(([provider, { alt, href, logo }]) => (
             <LinkWithLogo
               alt={alt}
-              href={href(chainName)}
+              href={href(relayName)}
               key={provider}
               logo={logo}
             />
